@@ -170,20 +170,42 @@ a{
     -webkit-transform: translate(-50%, -50%);
 }
 
+.website{
+    padding:0.5em 2em;
+    width:25%;
+    border-radius:2em;
+    background-color: var(--vitta-green);
+    color:var(--vitta-white);
+}
+
+.website:hover{
+    background-color: var(--vitta-green-dark);
+}
+
+/********************************/
+/*         2nd block            */
+/********************************/
+
+
 .humanBeing{
     padding:2em 0;
 }
 
+.humanBeing .container{
+    justify-content:space-between;
+}
+
 .humanBeing h2 {
+    margin: 1em 0;
     text-align:center;
     color: var(--vitta-green);
 }
 
 .humanBeing .projects {
-    width:30%;
-    padding-bottom:2em;
+    width:32%;
     flex-direction:column;
     justify-content:space-between;
+    border: 2px solid red;
 }
 
 .humanBeing .projects li:first-child{
@@ -194,12 +216,13 @@ a{
 }
 
 .humanBeing .course  {
-    width:70%;
+    width:65%;
+    padding:2em;
+    border: 2px solid red;
 }
 
 .humanBeing .projects ul,
 .humanBeing .course{
-    margin: 1em 0;
     border-radius:2em;
     background-color: var(--bg-primary);
     filter: drop-shadow(0px 0px 15px var(--vitta-black-shadow-color));
