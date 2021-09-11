@@ -94,7 +94,7 @@ header{
 
 
 /********************************/
-/*            Main              */
+/*          general             */
 /********************************/
 
 main {
@@ -121,9 +121,13 @@ section:first-child{
 }
 
 h2{
-    font-size:2em;
+    font-size:1.5em;
     font-weight: 800;
     width:100%;
+}
+
+p{
+    margin: 1em 0;
 }
 
 /********************************/
@@ -141,17 +145,24 @@ h2{
 .intro .txt{
     margin:auto;
     width:65%;
-    border:2px solid blue;
 }
 
-.intro .txt p{
-    margin: 1em 0;
+.intro .projects {
+    margin:auto;
+    width:50%;
+    padding-bottom:2em;
+}
+
+.intro .projects li:first-child{
+    list-style-type: none;
+    margin-left:-1em;
+    padding:1em 0;
+    font-weight:bold;
 }
 
 .intro .animation{
     width:35%;
     position: relative;
-    border:2px solid green;
 }
 
 .intro .animation img {
@@ -159,13 +170,15 @@ h2{
     border-style: none;
 }
 
+.responsive{
+    width:100%;
+    margin:auto;
+}
 
 #circle1{
-    max-width: 100%;
-    height: auto;
+    width:100%;
     border-radius:50%;
     animation: spin 20s infinite linear;
-    
 }
 
   
@@ -190,11 +203,11 @@ h2{
 }
 
 .humanBeing{
-    text-align:center;
     padding:2em 0;
 }
 
 .humanBeing h2 {
+    text-align:center;
     color: var(--vitta-green);
 }
 
