@@ -13,10 +13,6 @@
     --text-secondary: #8f8871;
     --trust-me: #3FA9F5;
 
-    /* text animation  */
-    --transition-speed: 600ms;
-    --txt-writing-speed: 3000ms;
-
     /* background color */
     --bg-primary: #FDFDFD;
     --bg-secondary: #F5F5F5;
@@ -45,13 +41,18 @@ html {
     color:var(--text-primary);
     font-family: var(--ff), sans-serif;
     font-size: 62.5%;
-
     /* makes auto scroll smooth with anchors */
     scroll-behavior: smooth;
 }
 
 .template {
-    background-color: var(--bg-primary);
+    background-color: var(--bg-secondary);
+    font-size:2em;
+}
+
+.container{
+    width:80%;
+    margin:auto;
 }
 
 /********************************/
@@ -60,9 +61,11 @@ html {
 
 header{
     width:100%;
-    height:7em;
+    height:5em;
     position: fixed;
     background-color: var(--bg-primary);
+    border: 1px solid var(--vitta-black-shadow-color);
+    z-index: 1;
 }
 
     /********************************/
@@ -96,19 +99,25 @@ header{
 
 main {
     margin:0;
-    padding-bottom:8em;
 }
 
 section{
     width:100%;
-    margin-bottom: 15px;
-    padding:10%;
-    border-radius: 0px 0px 4em 4em;
-    box-shadow:0px 0px 15px var(--vitta-black-shadow-color);
 }
 
 section:nth-child(even){
     background-color: var(--bg-secondary);
+    border-radius: 0px 4em 4em 0px;
+}
+
+section:nth-child(odd){
+    background-color: var(--bg-primary);
+    box-shadow:0px 0px 15px var(--vitta-black-shadow-color);
+    border-radius: 4em 0px 0px 4em;
+}
+
+section:first-child{
+    border-radius: 0px 0px 4em 4em;
 }
 
 h2{
@@ -118,32 +127,75 @@ h2{
 }
 
 /********************************/
-/*           accueil            */
+/*           intro              */
 /********************************/
 
 .intro{
-    margin-top:7em;
+    margin-top:2.5em;
+    justify-content: center;
+    align-content: center;
+    border-radius: 0px 0px 4em 4em;
+    filter: drop-shadow(0px 0px 15px var(--vitta-black-shadow-color));
 }
 
 .intro .txt{
-    width:70%;
+    margin:auto;
+    width:65%;
+    border:2px solid blue;
+}
+
+.intro .txt p{
+    margin: 1em 0;
 }
 
 .intro .animation{
-    width:30%;
-    margin:auto;
-    border:3px solid red;
+    width:35%;
+    position: relative;
+    border:2px solid green;
 }
 
-.intro .animation img{
-    width:70%;
-    height:auto;
-    margin:auto;
+.intro .animation img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+
+#circle1{
+    max-width: 100%;
+    height: auto;
     border-radius:50%;
+    animation: spin 20s infinite linear;
+    
+}
+
+  
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+#circle2{
+    width: 40%;
+    margin: 0;
+    border-radius:50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
 }
 
 .humanBeing{
+    text-align:center;
+    padding:2em 0;
+}
 
+.humanBeing h2 {
+    color: var(--vitta-green);
 }
 
 .skills{
