@@ -205,7 +205,6 @@ a{
     width:32%;
     flex-direction:column;
     justify-content:space-between;
-    border: 2px solid red;
 }
 
 .humanBeing .projects li:first-child{
@@ -218,7 +217,6 @@ a{
 .humanBeing .course  {
     width:65%;
     padding:2em;
-    border: 2px solid red;
 }
 
 .humanBeing .projects ul,
@@ -229,13 +227,39 @@ a{
 }
 
 .humanBeing .projects ul{
-    padding: 1em 2em;
+    padding: 0 2em;
+}
+
+.humanBeing .projects ul p{
+    display:none;
+}
+
+.portfolio:active > p,
+.doom:active,
+.breaker:active{
+    display:block;
+}
+
+.portfolio:hover,
+.doom:hover,
+.breaker:hover{
+    box-shadow: 0px 0px 15px var(--vitta-green);
+}
+
+.portfolio:active,
+.doom:active,
+.breaker:active{
+    box-shadow: 0px 0px 15px var(--vitta-green-dark);
 }
 
 .skills{
 
 }
 
+.skills h2{
+    color: var(--vitta-blue);
+    text-align:center;
+}
 /********************************/
 /*            tools             */
 /********************************/
