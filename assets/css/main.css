@@ -13,6 +13,8 @@
     --text-secondary: #8f8871;
     --trust-me: #3FA9F5;
 
+    
+
     /* background color */
     --bg-primary: #FDFDFD;
     --bg-secondary: #F5F5F5;
@@ -232,10 +234,6 @@ a{
     padding: 0 2em;
 }
 
-/* .doom:active,
-.breaker:active */
-
-
 #ptext,
 #dtext,
 #btext{
@@ -260,10 +258,6 @@ a{
     display:block;
 }
 
-.humanBeing{
-
-}
-
 .humanBeing h2{
     color: var(--vitta-blue);
     text-align:center;
@@ -271,10 +265,6 @@ a{
 
 .humanBeing .container{
     width:60%;
-}
-
-.humanBeing p{
-    text-align:center;
 }
 
 .meImg{
@@ -290,6 +280,127 @@ a{
     width:70%;
 }
 
+.precious{
+    padding-bottom:7em;
+}
+
+.precious h2{
+    text-align:center;
+    color:var(--vitta-yellow);
+}
+
+.precious .container p{
+    margin-top: 0;
+    text-align:center;
+    width:100%;
+}
+
+.precious .container p:first-child{
+    margin-top: 0;
+}
+
+.precious .container .wheel{
+    width:30%;
+}
+
+.precious .container .wheel img{
+    width:100%;
+}
+
+.precious .language{
+    width:70%;
+}
+
+#wheelBtn{
+    color: var(--vitta-white);
+    margin:auto;
+    width:30%;
+    border-radius:2em;
+    padding:1em 2em;
+    background-color: var(--vitta-green);
+}
+
+#wheelBtn{
+    padding:0.5em 2em;
+    margin-bottom:2em;
+    background-color: var(--vitta-green);
+}
+
+#wheelBtn:hover{
+    border:2px solid var(--vitta-green-dark);
+}
+
+#wheelBtn:active{
+    background-color: var(--vitta-green-dark);
+}
+
+.wheel{
+    position:relative;
+    background-image: url(../ressources/images/wheel_button.png);
+    width:30%;
+    margin:auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#pointer{
+    position:absolute;
+    width:30%;
+    height:auto;
+    top: 40%;
+    left: 90%;
+    transform-origin: 50% 50%;
+    z-index:1;
+}
+
+.language{
+    width:70%;
+    padding:3em 5em;
+}
+
+[id="1"],[id="2"],[id="3"],[id="4"],[id="5"],[id="6"]{
+   display:none;
+   width:70%;
+   margin:auto;
+}
+
+.wheelSpin{
+    animation: wheelAnim 3s linear;
+}
+
+@keyframes wheelAnim {
+    0% {
+        transform:rotate(var(--starting-deg));
+    }
+    90% {
+        transform:rotate(var(--mid-deg));
+    }
+    100% {
+        transform:rotate(var(--ending-deg));
+    }
+}
+
+.pointerSpin{
+    animation: pointerAnim 3s linear;
+}
+
+@keyframes pointerAnim {
+    0% {
+        
+    }
+    80% {
+        transform:rotate(var(--pstart-deg));
+    }
+    87% {
+        transform:rotate(var(--pmid-deg));
+    }
+    94% {
+        transform:rotate(var(--pmid2-deg));
+    }
+    100% {
+        transform:rotate(var(--pending-deg));
+    }
+}
 
 /********************************/
 /*            tools             */
